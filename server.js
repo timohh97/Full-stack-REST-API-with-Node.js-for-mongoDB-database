@@ -7,13 +7,13 @@ require("dotenv/config")
 const routeForPost = require("./routes/postRoute")
 const routeForGet = require("./routes/getRoute")
 const routeForDelete = require("./routes/deleteRoute")
-const routeForUpdate = require("./routes/updateRoute")
+const routeForPatch = require("./routes/patchRoute")
 
 server.use(bodyParser.json())
 server.use("/post", routeForPost)
 server.use("/get", routeForGet)
 server.use("/delete",routeForDelete)
-server.use("/patch",routeForUpdate)
+server.use("/patch",routeForPatch)
 
 
 mongoose.connect(process.env.URL,
