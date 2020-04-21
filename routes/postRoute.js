@@ -4,7 +4,7 @@ const PostModel = require("../models/PostModel")
 
 router.post("/", (request, response)=>
 {
-    console.log(request.body)
+    console.log("The post request is: "+request.body)
 
     const postaction = new PostModel({
         title: request.body.title,

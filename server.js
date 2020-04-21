@@ -8,7 +8,11 @@ server.use(bodyParser.json())
 
 const routeForPosts = require("./routes/postRoute")
 
-server.use("/posts", routeForPosts)
+server.use("/post", routeForPosts)
+
+const routeForGet = require("./routes/getAllRoute")
+
+server.use("/getalldata", routeForGet)
 
 
 mongoose.connect(process.env.URL,
