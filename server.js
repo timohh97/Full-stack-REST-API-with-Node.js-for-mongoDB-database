@@ -6,13 +6,14 @@ require("dotenv/config")
 
 server.use(bodyParser.json())
 
-const routeForPosts = require("./routes/postRoute")
+const routeForPost = require("./routes/postRoute")
 
-server.use("/post", routeForPosts)
+server.use("/post", routeForPost)
 
-const routeForGet = require("./routes/getAllRoute")
+const routeForGet = require("./routes/getRoute")
 
-server.use("/getalldata", routeForGet)
+server.use("/get", routeForGet)
+
 
 
 mongoose.connect(process.env.URL,
