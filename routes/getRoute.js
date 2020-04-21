@@ -9,6 +9,7 @@ router.get("/", async (request, response)=>
      const data = await PostModel.find()
      console.log(data)
      response.json(data)
+     console.log("Get request successful.")
      }
      catch(error)
      {
@@ -24,6 +25,7 @@ router.get("/:dataId", async (request, response)=>
     const result = await PostModel.findById(request.params.dataId)
     console.log(result)
     response.json(result)
+    console.log("Get request successful.")
     }
     catch(error)
     {

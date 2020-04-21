@@ -4,16 +4,14 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 require("dotenv/config")
 
-server.use(bodyParser.json())
-
 const routeForPost = require("./routes/postRoute")
-
-server.use("/post", routeForPost)
-
 const routeForGet = require("./routes/getRoute")
+const routeForDelete = require("./routes/deleteRoute")
 
+server.use(bodyParser.json())
+server.use("/post", routeForPost)
 server.use("/get", routeForGet)
-
+server.use("/delete",routeForDelete)
 
 
 mongoose.connect(process.env.URL,

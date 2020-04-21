@@ -16,12 +16,15 @@ router.post("/", (request, response)=>
         {
             response.json(result)
             console.log(result)
+            console.log("Post successful.")
         })
         .catch(error => {
             
             response.json(error)
             console.log(error)
         })
+
+    
 })
 
 
