@@ -16,7 +16,7 @@ router.post("/", (request, response)=>
         {
             response.json(result)
             console.log(result)
-            console.log("Post successful.")
+            console.log("Post request successful.")
         })
         .catch(error => {
             
