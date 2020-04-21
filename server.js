@@ -6,7 +6,7 @@ require("dotenv/config")
 
 server.use(bodyParser.json())
 
-const routeForPosts = require("./routes/postFile")
+const routeForPosts = require("./routes/postRoute")
 
 server.use("/posts", routeForPosts)
 
