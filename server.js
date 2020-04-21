@@ -5,6 +5,8 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 require("dotenv/config")
 
+server.use(express.static("Frontend"))
+
 const routeForPost = require("./routes/postRoute")
 const routeForGet = require("./routes/getRoute")
 const routeForDelete = require("./routes/deleteRoute")
@@ -25,4 +27,6 @@ mongoose.connect(process.env.URL,
 })
 
 server.listen(2000)
+
+
 

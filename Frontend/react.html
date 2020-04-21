@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <form>
+        <label>
+            Title:
+        </label>
+        <input type="text" id="title">
+        <br>
+        <label>
+            Description:
+        </label>
+        <input type="text" id="description">
+        <br>
+        <button type="submit">Get data</button>
+        <br>
+        <button type="reset">Delete</button>
+    </form>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+    <script type="text/babel">
+
+        var Users = React.createClass({
+
+            render: function () {
+                return (
+                    <div id="container">
+                        <form id="search" onSubmit={this.handleSubmit}>
+                            <label>Enter a title:</label>
+                            <input type="text" ref="title" placeholder="title" required/>
+                            <label>Enter a description:</label>
+                            <input type="text" ref="description" placeholder="description" required/>
+                            <input type="submit" value="Get"/>
+                        </form>
+                        <ul>
+                            {}
+                        </ul>
+                    </div>
+                );
+
+            },
+
+            handleSubmit: function(event){
+
+                event.preventDefault();
+                var title = this.refs.title.value;
+                var description = this.refs.description.value;
+
+                
+
+            }
+
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
