@@ -8,7 +8,13 @@ router.patch("/:dataId", async (request, response)=>
     try{
         const result = await PostModel.updateOne(
             {_id: request.params.dataId},
-            { $set: {title: request.body.title, description: request.body.description} }
+            { $set: {firstName: request.body.firstName, 
+                lastName: request.body.lastName,
+                age: request.body.age,
+                birthday: request.body.birthday,
+                job: request.body.job,
+                description: request.body.description
+            } }
             )
 
         console.log(result)
