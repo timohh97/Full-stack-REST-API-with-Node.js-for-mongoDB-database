@@ -4,17 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="delete.js"></script>
+    <title>Delete</title>
+    <link rel="stylesheet" href="styleGet.css">
+    <script src="getScript.js"></script>
+    <script src="deleteScript.js"></script>
 </head>
 
 <body>
-     <form>
-     <label>Id:</label>
-     <input id="Id" type="text">
-     <button onclick="deleteData();return false;" type="submit">Delete data</button>
-     <button type="reset">Reset input</button>
-     </form>
+    <form>
+        <label>Id of person:</label>
+        <input id="Id" type="text">
+        <br>
+        <br>
+        <textarea id="showData"></textarea>
+        <br>
+        <button onclick="getAllData();return false;" type="submit">Show all data</button>
+        <br>
+        <button onclick="deleteData();return false;" type="submit">Delete data</button>
+        <br>
+        <button type="reset">Reset input</button>
+    </form>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ function getData() {
     var id = document.getElementById("Id").value;
     if(id.length==0)
     {
-        alert("Get request not successful.")
+        alert("Please enter an id!")
     }
     else{
 
