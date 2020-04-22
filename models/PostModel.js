@@ -1,14 +1,30 @@
 const mongoose = require("mongoose")
 
 const PostPattern = mongoose.Schema({
-    title: {
+    firstName: {
        type: String,
        required: true 
     },
-    description: {
+    lastName: {
         type: String,
         required: true 
-     }
+     },
+   age: {
+      type: Number,
+      required: true
+   },
+   birthday:{
+       type: String,
+       required: true
+   },
+   job: {
+      type: String,
+      required: true
+   },
+   description:{
+      type: String,
+      required: true
+   }
 })
 
 
