@@ -7,16 +7,20 @@ function postData() {
     var jobV = document.getElementById("job").value;
     var descriptionV = document.getElementById("description").value;
 
+
     fetch("http://localhost:2000/post", {
-        method: 'POST', body:
-        {
-             firstName: firstNameV,
-             lastName: lastNameV,
-             age: ageV,
-             birthday: birthdayV,
-             job: jobV,
-             description: descriptionV
-        }
+        method: 'POST', 
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+
+            firstName: firstNameV,
+            lastName: lastNameV,
+            age:  ageV,
+            birthday: birthdayV,
+            job: jobV,
+            description: descriptionV
+        })
+        
     })
         .then(result => {
             console.log(result)
