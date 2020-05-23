@@ -8,7 +8,7 @@ function postData() {
     var descriptionV = document.getElementById("description").value;
 
 
-    fetch("http://localhost:2000/post", {
+    fetch("https://timoschessl-restapi-mongodb.herokuapp.com/post", {
         method: 'POST', 
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({

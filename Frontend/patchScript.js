@@ -9,7 +9,7 @@ function patchData() {
     var descriptionV = document.getElementById("description").value;
 
 
-    fetch("http://localhost:2000/patch/"+Id, {
+    fetch("https://timoschessl-restapi-mongodb.herokuapp.com/patch/"+Id, {
         method: 'PATCH', 
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({

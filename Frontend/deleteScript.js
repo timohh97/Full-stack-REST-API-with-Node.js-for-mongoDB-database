@@ -2,7 +2,7 @@ function deleteData() {
 
     var id = document.getElementById("Id").value;
 
-    fetch("http://localhost:2000/delete/" + id,{
+    fetch("https://timoschessl-restapi-mongodb.herokuapp.com/delete/" + id,{
         method: "DELETE"
     })
         .then(result => {

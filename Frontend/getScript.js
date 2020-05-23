@@ -8,7 +8,7 @@ function getData() {
     else{
 
     try{
-    fetch("http://localhost:2000/get/" + id)
+    fetch("https://timoschessl-restapi-mongodb.herokuapp.com/get/" + id)
         .then(result => {
             console.log(result)
             result.text().then(text => {document.getElementById("showData").value=text})
@@ -24,7 +24,7 @@ function getData() {
 
 function getAllData() {
 
-    fetch("http://localhost:2000/get")
+    fetch("https://timoschessl-restapi-mongodb.herokuapp.com/get")
     .then(result => {
         console.log(result)
         result.text().then(text => {document.getElementById("showData").value=text})
