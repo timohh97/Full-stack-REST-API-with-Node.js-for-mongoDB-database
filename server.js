@@ -6,14 +6,14 @@ const cors = require("cors")
 require("dotenv/config")
 
 server.use(express.static("Frontend"))
+server.use(cors())
+server.use(bodyParser.json())
 
 const routeForPost = require("./routes/postRoute")
 const routeForGet = require("./routes/getRoute")
 const routeForDelete = require("./routes/deleteRoute")
 const routeForPatch = require("./routes/patchRoute")
 
-server.use(cors())
-server.use(bodyParser.json())
 server.use("/post", routeForPost)
 server.use("/get", routeForGet)
 server.use("/delete",routeForDelete)
