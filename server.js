@@ -26,7 +26,8 @@ mongoose.connect(process.env.URL,
     console.log("Connected with database successfull!")
 })
 
-server.listen(2000)
+var port = process.env.PORT || 2000;
+server.listen(port)
 
 
 
