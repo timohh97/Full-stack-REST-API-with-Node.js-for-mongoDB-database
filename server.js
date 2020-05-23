@@ -19,8 +19,10 @@ server.use("/get", routeForGet)
 server.use("/delete",routeForDelete)
 server.use("/patch",routeForPatch)
 
+URL = "mongodb+srv://mainuser:test@cluster-0gtou.mongodb.net/person?retryWrites=true&w=majority"
 
-mongoose.connect(process.env.URL,
+
+mongoose.connect(URL,
 { useNewUrlParser: true , useUnifiedTopology: true}, () =>
 {
     console.log("Connected with database successfull!")
